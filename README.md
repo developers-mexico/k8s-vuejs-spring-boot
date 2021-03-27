@@ -45,6 +45,9 @@ minikube addons enable ingress
 # Verify ingress
 kubectl get pods -n kube-system
 
+# Dashboard
+minikube dashboard
+
 # Stop minikube
 minikube stop
 
@@ -65,6 +68,9 @@ kubectl create -f todo/ingress.yml
 
 # Create multiple objects
 kubectl create -f todo-ui/
+
+# Create volume
+kubectl create -f todo-pv/
 ```
 
 ## Scale deployment

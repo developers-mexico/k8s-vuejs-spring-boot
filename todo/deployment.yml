@@ -20,3 +20,10 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: todo-pvc-deploy
+              mountPath: /data
+      volumes:
+        - name: todo-pvc-deploy
+          persistentVolumeClaim:
+            claimName: todo-pv-claim
