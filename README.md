@@ -12,26 +12,26 @@
 3. Ubuntu 20.04.2.0 LTS
    https://ubuntu.com/
 
-## Build And Push Spring Boot Backend
+## Build and push image Spring Boot Backend
 ``` bash
 cd todo
 
 # build image for spring boot
-docker push alanarturohernandez/todo
+docker build -t alanarturohernandez/todo:latest .
 
 # push image in docker hub
-docker push alanarturohernandez/todo
+docker push alanarturohernandez/todo:latest
 ```
 
-## Build And Push VueJS Frontend
+## Build and push image VueJS Frontend
 ``` bash
 cd todo-ui
 
 # build image for vuejs
-docker push alanarturohernandez/todo-ui
+docker build -t alanarturohernandez/todo-ui:latest .
 
 # push image in docker hub
-docker push alanarturohernandez/todo
+docker push alanarturohernandez/todo-ui:latest
 ```
 
 ## Minikube
