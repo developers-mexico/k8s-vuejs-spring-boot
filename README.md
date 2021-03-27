@@ -14,7 +14,7 @@
 
 ## Build and push image Spring Boot Backend
 ``` bash
-cd todo
+cd code/todo
 
 # build image for spring boot
 docker build -t alanarturohernandez/todo:latest .
@@ -25,7 +25,7 @@ docker push alanarturohernandez/todo:latest
 
 ## Build and push image VueJS Frontend
 ``` bash
-cd todo-ui
+cd code/todo-ui
 
 # build image for vuejs
 docker build -t alanarturohernandez/todo-ui:latest .
