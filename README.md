@@ -50,7 +50,6 @@ minikube stop
 
 # Delete minikube
 minikube delete
-
 ```
 
 ## Create k8s objects
@@ -66,5 +65,29 @@ kubectl create -f todo/ingress.yml
 
 # Create multiple objects
 kubectl create -f todo-ui/
+```
 
+## Scale deployment
+``` bash
+# Scale backend
+kubectl scale deployment/todo-deployment --replicas 3
+
+# Scale frontend
+kubectl scale deployment/todo-ui-deployment --replicas 3
+```
+
+
+## Debugging deployment
+``` bash
+# Describe
+kubectl describe pod/todo-deployment-688c8d967d-7xvkg
+
+# Show logs
+kubectl logs -f pod/todo-deployment-688c8d967d-7xvkg
+
+# Portforward
+kubectl port-forward pod/todo-deployment-688c8d967d-7xvkg 8080:8080
+
+# SSH
+kubectl exec -it todo-deployment-688c8d967d-7xvkg -- sh
 ```
